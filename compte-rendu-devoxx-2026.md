@@ -1,11 +1,18 @@
 # Compte-rendu — Devoxx France 2026
+
 **Par** : Usama OSMAN MOHAMED
+**Version** : 1.0
+**Date** : 27 avril 2026  
+**Dernière mise à jour** : [27/04/2026]
+
+## Historique des versions
+- **v1.0** (27/04) : Version Initiale du Compte-Rendu
+
+---
 
 **Lieu** : Paris
 **Dates** : 22-24 avril 2026
 **Site officiel** : <https://www.devoxx.fr/>
-
----
 
 ## Introduction
 
