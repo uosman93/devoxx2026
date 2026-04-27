@@ -1,24 +1,31 @@
 # Compte-rendu — Devoxx France 2026
 
-**Par** : Usama OSMAN MOHAMED
-**Version** : 1.0
+**Par** : Usama OSMAN MOHAMED  
+**Version** : 1.1  
 **Date** : 27 avril 2026  
-**Dernière mise à jour** : [27/04/2026]
+**Dernière mise à jour** : [28/04/2026]
 
 ## Historique des versions
 - **v1.0** (27/04) : Version Initiale du Compte-Rendu
+- **v1.1** (28/04) : Mise à jour des talks Winamax (Tracing distribué) et OVHCloud (Histoire des noms de domaine), ajout du public concerné
 
 ---
 
-**Lieu** : Paris
-**Dates** : 22-24 avril 2026
-**Site officiel** : <https://www.devoxx.fr/>
+**Lieu** : Paris  
+**Dates** : 22-24 avril 2026  
+**Site officiel** : <https://www.devoxx.fr/>  
+
+> *Compte-rendu rédigé à partir de mes notes personnelles et de photos prises durant l'événement, avec l'aide de Claude AI pour la mise en forme et la structuration.*
+
+> *Devoxx France 2026, c'est 259 sessions réparties sur trois jours, avec souvent une dizaine de conférences en parallèle à chaque créneau. Impossible donc de tout voir, et chaque participant repart avec sa propre version de l'événement. Ce compte-rendu ne fait pas exception : il reflète mon point de vue personnel sur les sessions que j'ai choisi de suivre, en fonction de mes intérêts et de mes contraintes du moment. Le fil rouge proposé en synthèse — « l'augmentation n'est tenable que si la discipline suit » — est ma lecture des trois jours, pas une vérité universelle.*
+
+---
 
 ## Introduction
 
 **259 sessions. 307 intervenants. 10 thématiques.** Devoxx France 2026 confirme son statut de rendez-vous incontournable de la tech francophone, avec une édition d'une densité rare couvrant l'IA agentique, la sécurité, les fondamentaux d'architecture, l'observabilité, le scheduling cloud, la cryptographie post-quantique et l'impact sociétal du numérique.
 
-Devoxx France 2026 s'est ouvert sur une métaphore qui aura traversé toute l'édition — celle des échecs, racontée par Laurent Fressinet : trente ans après Deep Blue, ce n'est pas la machine qui a remplacé le joueur, c'est le joueur qui a appris à composer avec elle. Cette idée d'**humain augmenté plutôt que remplacé** résonne avec l'ensemble des trois jours.
+Devoxx France 2026 s'est ouvert sur une métaphore qui aura traversé toute l'édition — celle des échecs, racontée par Laurent Fressinet : près de trente ans après Deep Blue, ce n'est pas la machine qui a remplacé le joueur, c'est le joueur qui a appris à composer avec elle. Cette idée d'**humain augmenté plutôt que remplacé** résonne avec l'ensemble des trois jours.
 
 Car si l'IA agentique est désormais sortie de l'exploration pour entrer en industrialisation — Doctolib affichant 100 % d'adoption, WeScale promouvant le spec-driven development, le standard `AGENTS.md` qui se généralise — la principale leçon de cette édition est paradoxale : **plus l'IA produit vite, plus l'humain doit être rigoureux**. Le contexte se discipline, les specs se versionnent, les workflows se structurent. Le *prompt engineering* devient *spec engineering*.
 
@@ -38,6 +45,8 @@ Le fil rouge tient en une phrase : **l'augmentation n'est tenable que si la disc
 ### 9h30 — Keynote : Les échecs à l'ère de l'intelligence artificielle
 
 **Intervenant : Laurent Fressinet** — Grand Maître International, double champion de France (2010, 2014), membre de l'équipe de préparation de Magnus Carlsen de 2013 à 2022 (5 titres de champion du monde), ancien directeur France de chess24. Son positionnement est unique : il a traversé l'ère pré-informatique, l'arrivée des moteurs d'analyse, puis la révolution des IA modernes.
+
+**Public** : Tous publics.
 
 **Contexte : les échecs comme laboratoire de l'IA**
 
@@ -60,6 +69,8 @@ Point central de la keynote : l'IA n'a pas remplacé les joueurs, elle les a *au
 ### 10h30 — La dette de conception
 
 Présenté par **Julien Topçu** et **Josian Chevalier** (Shodo). Un talk sur un problème courant : à force de corrections successives sans recul, le modèle métier d'une application se fragilise et devient incohérent. C'est ce qu'on appelle la **dette de conception** — plus insidieuse que la dette technique, car elle touche la façon dont on représente le métier dans le code. La session est portée par une mise en scène humoristique parodiant Le Seigneur des Anneaux et Star Wars pour illustrer les travers de la centralisation à outrance.
+
+**Public** : Architectes / Tech Leads, Développeurs.
 
 **Le problème en une image** : les orateurs utilisent le mot-valise **« cuichette »** (cuillère + fourchette) — et l'**effet Spork** — pour décrire ce qui arrive quand deux concepts distincts sont fusionnés dans un même objet. Le résultat n'est plus vraiment ni l'un ni l'autre, et chaque évolution devient un casse-tête. C'est la même logique que « le modèle unique pour les gouverner tous » : vouloir centraliser mène inexorablement à la **Grande Boule de Boue** (*Big Ball of Mud*).
 
@@ -103,6 +114,8 @@ Pour sortir de l'impasse, le talk propose la **Mitose de Modèle** : séparer pr
 
 **Orateur : Olivier Poncet** (Weyland-Yutani). Rétrospective sur *Another World* (1991), jeu d'aventure cinématique culte conçu par Éric Chahi seul (à l'exception de la musique), alors âgé de 22 ans. Le talk décortique l'architecture logicielle du jeu et montre comment des choix de conception visionnaires ont permis portage et longévité — jusqu'à une adaptation WebAssembly moderne réalisée par l'orateur lui-même.
 
+**Public** : Tous publics, Développeurs.
+
 **Minimalisme et prouesses techniques**
 - Exécutable de 24 Ko, assets de 1,2 Mo : tout le jeu tient sur une seule disquette
 - Développé sur Amiga 500 ; outils de dessin créés en BASIC par Chahi lui-même
@@ -132,6 +145,8 @@ Cette architecture — VM indépendante du matériel, bytecode dédié, multitâ
 
 Depuis trois ans, les vidéos d'introduction et l'identité visuelle de Devoxx France ne passent pas inaperçues. Cette session en dévoile les coulisses : une collaboration à deux voix, entre un graphiste et un organisateur, sur comment les outils d'IA génératifs ont bouleversé le processus de création visuelle — avec, en filigrane, un message à destination des développeurs : ce bouleversement n'est qu'une préfiguration de ce qui nous attend.
 
+**Public** : Tous publics, Développeurs.
+
 **Rétrospective visuelle — Les grandes enjambées techniques (2023–2026)**
 
 La session s'ouvre sur une timeline des évolutions techniques : chaque année a apporté un saut qualitatif visible dans les rendus (gap image en 2023–2024, gap vidéo en 2024–2025, puis Nano Gamma en 2026). Des outils comme **Kling** et **Weavy** sont cités parmi les plus avancés explorés pour la génération vidéo.
@@ -159,22 +174,39 @@ Le workflow est devenu **fondamentalement itératif et exploratoire** : on ne va
 - La **« voie du ninja »** (10 ans pour devenir expert) est révolue
 - Ce que vivent les créatifs aujourd'hui **préfigure ce que vivront les développeurs** demain
 
-### 14h30 — De 0 à des milliards de traces : l'observabilité chez Winamax
+### 14h35 — De zéro à des milliards de traces : le tracing distribué chez Winamax
 
-Contexte : ~500 employés à Paris, stack full JS, React côté front, très couplé à AWS, **700+ microservices**.
+**Orateurs : Anthony Maffert et Nicolas Fidel** (Winamax).
 
-Problème de départ : trop de logs, trop de métriques.
+**Public** : DevOps / SRE / Platform Engineers, Développeurs.
 
-Solution : passage au standard **OpenTelemetry**, organisé en 4 piliers :
+Contexte : ~500 employés à Paris, stack full JS, React côté front, très couplé à AWS, **700+ microservices**. La contrainte structurante : des données joueurs soumises à des obligations strictes de confidentialité, qui excluent d'emblée les solutions SaaS (Datadog, Sentry). Tout doit être auto-hébergé.
 
-1. **Production des traces** → production de spans
-2. **Collecte** : moments d'intensité (schedule rapide), pattern sidecar évité (trop complexe), choix d'un cluster gateway
-3. **Stockage** : simple, rapide, résistant à la charge, compatible OpenTelemetry → observabilité self-hosted avec **Quickwit sur S3**
-4. **Recherche** : pilotée par 2 questions — coût ressources et volumétrie
+**Le problème : l'enfer des microservices**
+
+Avant le tracing, le débogage était comparé à de l'archéologie. Comprendre pourquoi une requête échouait dans une chaîne de services prenait des heures à travers des téraoctets de logs textuels — long, coûteux, souvent sans résultat probant. Le besoin : suivre le cheminement exact d'une requête de bout en bout, à l'échelle de milliards de mains de poker et de pics de charge imprévisibles (soirs de Ligue des Champions).
+
+**La solution : une stack 100 % Open Source structurée en 4 piliers**
+
+1. **Production des traces** — auto-instrumentation Node.js « plug & play » : un simple import suffit pour collecter automatiquement les appels HTTP, base de données et Redis. L'adoption par les équipes est ainsi facilitée sans surcharge de configuration.
+
+2. **Collecte (Gateway Mode)** — le pattern sidecar a été écarté (trop lourd sur AWS ECS) au profit d'un **cluster de collecteurs OpenTelemetry en mode gateway**. **Kafka** est utilisé comme tampon pour absorber les pics de charge massifs : lors des redistributions de gains après les matchs, le pipeline encaisse plus de **400 Mo/s** de traces.
+
+3. **Stockage — Quickwit sur S3** — choix central de l'architecture : **Quickwit** est un moteur de recherche haute performance qui indexe les traces directement sur Amazon S3. L'indexation est découplée de la recherche, ce qui garantit la fiabilité même sous charge. Résultat concret : **45 To de traces stockés pour environ 300 $/mois**, un coût dérisoire rapporté au volume.
+
+4. **Visualisation — Jaeger** — interface d'interrogation et de visualisation des traces, complémentaire de Quickwit pour l'exploration des chemins de requêtes.
+
+**Résultats et cas d'usage**
+
+Le déploiement a été progressif, en commençant par le service critique d'authentification. Le gain le plus marquant : une requête SQL lente (`SELECT SUM...`) bloquant un service a été identifiée en **30 secondes**, là où l'analyse des logs aurait pris plusieurs heures.
+
+Le tracing distribué est devenu, selon les orateurs, « la pièce manquante du puzzle » de l'observabilité chez Winamax — une démonstration que la contrainte (pas de SaaS) peut devenir un levier d'architecture maîtrisée et économiquement viable.
 
 ### 15h40 — Tic-Tac... ! Maîtrisez le temps et NTP avant qu'il ne soit trop tard
 
 Présenté par **David Santiago** et **Cynthia Treger** (Microsoft). Un talk mêlant histoire, anecdotes techniques et bonnes pratiques — de l'ombre des cadrans solaires aux horloges atomiques des satellites GPS.
+
+**Public** : DevOps / SRE / Platform Engineers, Développeurs.
 
 **Notions clés**
 - GMT ≠ UTC ≠ TAI
@@ -248,6 +280,8 @@ Résultat visible avec `chronyc sources` : la source réseau disparaît, remplac
 
 Présenté par **Alexandre Guillemot** et **Axel Chauvin** (WeScale). Un Tools-in-Action en live, sans slides, partant d'un dossier vide pour construire le socle documentaire d'un projet. La thèse centrale : la documentation n'est pas un luxe, c'est l'assurance-vie de l'agilité — sans elle, chaque modification devient un risque et l'onboarding un calvaire.
 
+**Public** : Développeurs, Architectes / Tech Leads.
+
 **GitHub Spec-kit en pratique** :
 - **Standardisation** : bootstrap d'une structure documentaire cohérente (Clean Arch + `docs/`) pilotée par le code
 - **Discipline automatisée** : la CI devient le garant du patrimoine technique — blocage de PR sans ADR, validation de structure
@@ -272,8 +306,6 @@ Promotion du **Spec-Driven Development** :
 
 ## Jeudi 23 avril
 
-> Beaucoup trop de monde partout cette journée.
-
 **Stands visités** :
 - **Docker** : sandbox pour agents LLM
 - **Chainguard** (déjà en contact avec Samuel Ménard) : sécurité des conteneurs avec traçabilité
@@ -281,6 +313,8 @@ Promotion du **Spec-Driven Development** :
 ### 10h30 — Grandir avec le numérique : et si on apprenait aux enfants à s'en protéger ?
 
 **Oratrice : Estelle Landry** — Product Manager avec plus de 10 ans d'expérience dans la conception de produits numériques à fort impact, chez **Pix** (groupement d'intérêt public au service des citoyens français dans l'apprentissage du numérique).
+
+**Public** : Tous publics.
 
 Talk non-technique mais très marquant surtout pour les parents.
 
@@ -334,6 +368,8 @@ La conférence se conclut par un appel à la responsabilité des créateurs de t
 ### 11h30 — L'Agentic Coding, nouveau territoire du Platform Engineering (Doctolib)
 
 **Orateurs : Yankı Sesyılmaz** (Staff SRE) et **Julien Tanay** (Senior Software Engineer) — équipe AI Scaling chez Doctolib.
+
+**Public** : Engineering Managers / CTO, DevOps / SRE / Platform Engineers.
 
 Un talk de platform engineering avant d'être un talk sur l'IA : comment construire une plateforme IA collaborative pour 600 ingénieurs, au-delà du simple taux d'adoption. Sujets couverts : agentic coding, expérience développeur, architecture de plugins extensible, métriques pertinentes et échecs réels.
 
@@ -400,6 +436,8 @@ Par honnêteté, les orateurs soulignent que l'adoption reste **inégale** en pr
 
 **Orateurs : Thomas PIERRAIN** et **Julien Topçu** (Shodo). Session de live coding partant d'un monolithe spaghetti legacy pour aboutir à un monolithe modulaire, avant de conclure sur l'extraction d'un module en microservice autonome. Le talk prolonge directement la réflexion ouverte le matin sur la dette de conception, en apportant cette fois la solution concrète.
 
+**Public** : Architectes / Tech Leads, Développeurs.
+
 **Le constat de départ**
 
 Une décennie de microservices a montré les limites du découpage précipité : des microservices mal conçus se transforment en monolithe distribué, encore plus problématique que le monolithe spaghetti qu'ils étaient censés remplacer. Le **monolithe modulaire** s'impose aujourd'hui comme une alternative sérieuse — à condition de savoir le découper sans créer de modules trop fortement couplés.
@@ -428,6 +466,8 @@ Point de mise en garde : une architecture hexagonale mal appliquée peut elle-m�
 ### 14h30 — Secure all the things: From IaC to Kubernetes (DevSecOps)
 
 **Orateur : Romain Boulanger** — Cloud and DevSecOps Architect @ Piguet Galland & Cie S.A. | [Slides](https://kfsattfitk.filador.ch/#/1)
+
+**Public** : Sécurité, DevOps / SRE / Platform Engineers.
 
 Retour d'expérience sur 2 ans de transition DevSecOps chez Piguet Galland & Cie (banque privée), avec pour objectif de poser les fondations nécessaires au déploiement d'un nouvel e-banking — on-premise et cloud. La présentation s'organise autour d'une série de questions pratiques, de l'IaC jusqu'à la sécurisation réseau dans Kubernetes.
 
@@ -505,11 +545,11 @@ Exemple montré en slide : interdiction du tag `:latest` sur les images de conte
 - Le DevSecOps est avant tout un état d'esprit
 - La sécurité est l'affaire de tous
 
-> *(Note personnelle)* La surveillance runtime des comportements suspects dans Kubernetes (détection d'anomalies, processus inattendus, écriture dans des répertoires système…) est un sujet complémentaire non abordé dans ce talk. **Falco** est l'outil de référence de l'écosystème pour ce cas d'usage.
-
 ### 17h — Domptez vos agents : AGENTS.md et Context Engineering pour une IA déterministe
 
 **Orateur** : Benoît Fontaine — Architecte Groupe chez Septeo.
+
+**Public** : Développeurs, Architectes / Tech Leads.
 
 La thèse centrale : là où la plupart des développeurs se contentent de prompts isolés, il faut aller bien au-delà du *prompt engineering* pour atteindre le **context engineering** — transformer ses assistants IA (Claude, Cursor…) en véritables partenaires d'ingénierie fiables, via la standardisation du contexte.
 
@@ -584,6 +624,8 @@ Résultat : 4 sous-agents × 200 k tokens = **800 k de contexte effectif** dans 
 
 **Titre complet** : *ClaudeCode.proTips(30, minutes=30).run()*
 **Orateur** : Erwan Gereec (Doctolib)
+
+**Public** : Développeurs.
 
 30 minutes, 30 astuces. 1 mission : transformer la manière de travailler avec Claude Code. La session couvre prompting, refactoring, debug, tests, APIs, gestion du contexte et UI — pour faire de Claude Code un vrai copilote, bien au-delà d'un simple générateur de code.
 
@@ -752,7 +794,7 @@ Les hooks sont des scripts déclenchés automatiquement à des moments clés du 
 
 Deux outils complémentaires pour les tâches répétitives :
 
-- `/loop` **(local)** — tourne dans le terminal actuel ; idéal pour surveiller un déploiement, une PR ou relancer une vérification ; s'arrête à la fermeture du terminal. Exemple : `/loop 5e vérifie si le déploiement est terminé`
+- `/loop` **(local)** — tourne dans le terminal actuel ; idéal pour surveiller un déploiement, une PR ou relancer une vérification ; s'arrête à la fermeture du terminal. Exemple : `/loop 5m vérifie si le déploiement est terminé`
 - `/schedule` **(cloud)** — tourne sur l'infrastructure Anthropic, sans votre machine ; déclenché par un calendrier, une API ou des événements GitHub ; continue même si votre ordinateur est éteint
 
 **Tip 28 — Créez vos propres skills !**
@@ -785,6 +827,8 @@ Fin de session dans la bonne humeur.
 ### 10h30 — Limits, Requests, QoS, PriorityClasses : démystifions le scheduling dans K8s !
 
 **Orateurs : Denis Germain** (blog.zwindler.fr) et **Quentin Joly** (une-tasse-de.cafe) — tous deux ingénieurs chez **Lucca**. Talk particulièrement pédagogue, illustré par une série de démos live poussant les clusters dans leurs derniers retranchements.
+
+**Public** : DevOps / SRE / Platform Engineers.
 
 **Problématique de départ** : limits, requests, QoS, PriorityClasses — tout le monde sait qu'il faut les spécifier en production, mais peu comprennent vraiment ce qu'il se passe sous le capot quand les ressources viennent à manquer.
 
@@ -837,6 +881,8 @@ La QoS gère la survie en cas de crise, mais ne permet pas de garantir le déplo
 
 **Orateurs : Mehdi Oualiken et Abdessamii Lazghab** (Amazon Web Services).
 
+**Public** : Développeurs.
+
 Atelier pratique de 2 heures centré sur **Amazon Nova Sonic**, le modèle speech-to-speech d'AWS : construction d'un agent conversationnel vocal de bout en bout avec capture audio en streaming, compréhension du langage, logique de dialogue et génération de réponses parlées. Format 100 % hands-on, pré-requis : bases Python et APIs.
 
 > *(Note personnelle)* Je suis arrivé en cours de route faute de places dans d'autres sessions — je n'ai donc qu'une partie du contenu.
@@ -853,6 +899,8 @@ Le framework utilisé pour orchestrer le pipeline voix-à-voix est **Strands Age
 ### 13h30 — Migration quantique : *Theory to Practice — Real-World Lessons in Post-Quantum Cryptography Migration*
 
 Présenté par Akihiro Nishikawa (Cloud Solution Architect, Microsoft).
+
+**Public** : Sécurité, Architectes / Tech Leads.
 
 **Pourquoi agir maintenant ?**
 - Aucun algorithme cryptographique ne reste sûr éternellement (DES, SHA-1 déjà cassés ; RSA et ECDSA suivront)
@@ -882,26 +930,59 @@ Présenté par Akihiro Nishikawa (Cloud Solution Architect, Microsoft).
 
 À retenir : *« Inventory first. Hybrid key exchange first. Signatures next. »*
 
-### 14h35 — Histoire des noms de domaine
+### 14h35 — Noms de domaines : la grande histoire des petites extensions
 
-**Anatomie d'un nom de domaine** :
-- Étiquette
-- Extension
-- Extensions de second niveau possibles : `gouv.fr`
-- TLD (`.fr`) — SLD (`.gouv.fr`) — 3LD (`anjo.aichi.jp`)
+**Orateurs : Benoît Masson et Théo Bougé** (OVHCloud). Une plongée dans les coulisses techniques et géopolitiques du système des noms de domaine, en amont du prochain round ICANN prévu en 2026 qui ouvrira une nouvelle fenêtre de candidature pour créer des extensions.
+
+**Public** : Tous publics.
+
+**Fondamentaux techniques**
+
+**Anatomie d'un nom de domaine** : une étiquette (choisie par l'utilisateur) suivie d'une extension prédéfinie. La hiérarchie DNS s'organise en niveaux : **Serveur Racine** (géré par l'ICANN) → **Serveur de l'extension** → **Serveur DNS du domaine final**.
 
 **Types d'extensions** :
-- **ccTLD** (country code) / **gTLD** (general)
-- **IDN** (International Domain Name) depuis 2003
+- **ccTLD** (Country Code TLD) : extensions de pays en 2 lettres (`.fr`, `.uk`, `.ai`)
+- **gTLD** (Generic TLD) : extensions génériques à 3+ lettres (`.com`, `.net`, `.ovh`)
+- **IDN** (International Domain Name) : support des caractères non-ASCII depuis 2003
 
-**Architecture DNS** :
-- **ICANN** à la racine
-- **Whois** : déprécié en 2025 (pas de standard pour les clés et contenus)
-- **RDAP** : nouveau protocole, JSON via HTTPS
+**Infrastructure et transparence** :
+- **WHOIS** : ancien protocole peu structuré, déprécié en 2025 — pas de standard pour les clés
+- **RDAP** (Registration Data Access Protocol) : successeur moderne, JSON via HTTPS, lisible par les machines
+
+**La géopolitique cachée des extensions**
+
+Certaines extensions de pays (ccTLD) se sont transformées en actifs stratégiques massifs, détournées de leur usage initial pour des raisons commerciales :
+
+- **`.ai` (Anguilla)** : porté par l'explosion de l'intelligence artificielle, il représente désormais **30 % du PIB** de cette petite île caribéenne
+- **`.tv` (Tuvalu)** : monopolisé par le monde du streaming et de la télévision (Twitch), pèse pour **6 % du PIB** du pays
+- **`.su` (Union Soviétique)** : créée en 1990, techniquement disparue en 1991, mais toujours active en 2026 — un cas unique d'extension "fantôme" qui ne correspond à aucun pays souverain
+- **`.yu` (Yougoslavie)** : disparue en 2010 après la dislocation du pays, preuve que la géopolitique peut physiquement supprimer des extensions
+
+**Risques géopolitiques concrets** : des extensions peuvent devenir instables ou complètement inaccessibles en cas de sanctions (`.af` en Afghanistan depuis août 2021) ou de changements de souveraineté (`.io` dans l'Océan Indien britannique — statut territorial contesté).
+
+**La vague de 2012 et le business des extensions**
+
+En 2012, l'ICANN a ouvert le marché en permettant à des entreprises de créer leurs propres extensions (gTLD) — un tournant majeur :
+
+- **Coût d'entrée** : déposer un dossier pour créer une extension coûtait environ 185 000 $
+- **Stratégie de marque** : des géants (Leclerc, SNCF) ont créé leurs propres extensions pour sécuriser leur image de marque
+- **Spéculation record** : l'extension **`.web`** a suscité une bataille acharnée et s'est vendue pour **135 millions de dollars** à Verisign — la vente la plus chère du marché des domaines
+- **Cyber-extorsion légale** : l'extension **`.sex`** a été créée par un investisseur dans le but explicite de forcer les grandes marques à racheter leur nom de domaine pour éviter du contenu diffamatoire — une forme de cybersquatting préventif très discutée
+
+**L'avenir : le round 2026**
+
+Une nouvelle fenêtre de candidature s'ouvrira en **avril 2026** pour créer des extensions :
+
+- **Ticket d'entrée** : passera à environ 200 000 $ (hausse modérée)
+- **Stratégie simplifiée** : l'ICANN envisage des créations « au fil de l'eau » plutôt que par vagues tous les 15 ans — réduisant le temps d'attente et ouvrant le marché en continu
+
+**Conclusion** : les noms de domaine ne sont pas qu'une adresse technique. Derrière chaque point se cache un échiquier mondial où se mêlent souveraineté nationale, revenus d'État, spéculation financière et stratégies de marques — un véritable tissu conjonctif de l'Internet souverain et des logiques d'innovation commerciale.
 
 ### 15h40 — Refactorisation sans tout casser : anatomie des patterns de modernisation incrémentale
 
 Présenté par Hela Ben Khalfallah (*Crafting Clean Code*).
+
+**Public** : Architectes / Tech Leads, Développeurs.
 
 **Constat de départ** : tout le monde veut moderniser un legacy, la tentation est de tout réécrire d'un coup, le résultat habituel est régressions, blocages, rollback. La modernisation est un problème de **séquençage**, pas de remplacement total.
 
@@ -931,6 +1012,8 @@ Présenté par Hela Ben Khalfallah (*Crafting Clean Code*).
 ### 17h — De la galère des setups locaux aux DevContainers : notre retour d'expérience
 
 **Orateur : Thomas Rumas** (ADEO). Tool in Action présentant l'adoption des DevContainers pour unifier et automatiser les environnements de développement chez ADEO. Le point de départ : les scripts bash atteignent leurs limites dès qu'il s'agit de standardiser des environnements à grande échelle.
+
+**Public** : Développeurs, DevOps / SRE / Platform Engineers.
 
 **Problème de départ : l'évaluation de skills IA qui triche**
 
