@@ -1,13 +1,14 @@
 # Compte-rendu — Devoxx France 2026
 
 **Par** : Usama OSMAN MOHAMED  
-**Version** : 1.1  
+**Version** : 1.2  
 **Date** : 27 avril 2026  
 **Dernière mise à jour** : [28/04/2026]
 
 ## Historique des versions
 - **v1.0** (27/04) : Version Initiale du Compte-Rendu
 - **v1.1** (28/04) : Mise à jour des talks Winamax (Tracing distribué) et OVHCloud (Histoire des noms de domaine), ajout du public concerné
+- **v1.2** (28/04) : Mise à jour des découvertes hors talks (docker sandboxes) 
 
 ---
 
@@ -305,10 +306,6 @@ Promotion du **Spec-Driven Development** :
 ---
 
 ## Jeudi 23 avril
-
-**Stands visités** :
-- **Docker** : sandbox pour agents LLM
-- **Chainguard** (déjà en contact avec Samuel Ménard) : sécurité des conteneurs avec traçabilité
 
 ### 10h30 — Grandir avec le numérique : et si on apprenait aux enfants à s'en protéger ?
 
@@ -1066,6 +1063,28 @@ Un script de vérification (`.devcontainer/tests/verify.sh`) confirme que tout e
 - Préférer les bases images **Microsoft** (`mcr.microsoft.com/devcontainers/…`) pour la fiabilité et la maintenance
 - Travail à distance possible avec **VSCode** via l'extension Dev Containers
 - Le container est aussi un **bac à sable pour agents IA** : le blast radius reste contenu, l'environnement hôte reste propre
+
+---
+
+## Découvertes hors-talks
+
+En marge des conférences, quelques découvertes valent le détour.
+
+### Docker Sandboxes — exécuter des agents IA en isolation
+
+[Docker Sandboxes](https://docs.docker.com/ai/sandboxes/) (encore en *experimental*, Docker Desktop 4.58+) permet de faire tourner des agents de coding IA — Claude Code, Codex, Copilot, Gemini, Kiro… — dans des environnements isolés sur la machine du développeur.
+
+**Différence clé avec un simple conteneur** : chaque sandbox est une **microVM** dotée de son propre daemon Docker privé. L'agent peut spinner ses propres conteneurs de test et modifier son environnement, sans aucun accès au daemon Docker de l'hôte ni aux fichiers hors workspace.
+
+**Pourquoi c'est intéressant** :
+- **Autonomie sans risque** : « YOLO mode » par défaut — l'agent travaille sans demander de permission, mais le blast radius reste cantonné à la microVM
+- **Workspace synchronisé** : le répertoire projet est monté au même chemin absolu côté hôte et côté sandbox, ce qui rend les messages d'erreur cohérents entre les deux environnements
+- **Multi-projets isolés** : `docker sandbox run claude ~/project-a` et `docker sandbox run claude ~/project-b` créent deux sandboxes complètement indépendantes
+- **Contrôle d'accès réseau** : on peut restreindre ce que l'agent peut joindre depuis sa sandbox
+
+Docker Sandboxes complète bien le travail présenté par Thomas Rumas le vendredi sur les DevContainers AI — même logique de bac à sable pour agents, mais avec un niveau d'isolation supplémentaire (microVM vs conteneur).
+
+> **Limitation actuelle** : les microVMs ne sont disponibles que sur macOS et Windows. Linux reste sur des sandboxes container-based legacy (Docker Desktop 4.57+).
 
 ---
 
